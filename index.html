@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic SEO Meta Tags -->
   <meta charset="UTF-8">
   <title>Tech Team Portfolio | Web & Mobile App Development Experts</title>
   <meta name="description" content="Professional software development team specializing in Web Development, Mobile App Development, and Custom Software Solutions. Scalable, agile, and high-performance projects for startups and enterprises.">
@@ -10,43 +9,282 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Tech Team Portfolio | Web & Mobile App Development Experts">
-  <meta property="og:description" content="Professional software development team specializing in Web Development, Mobile App Development, and Custom Software Solutions.">
-  <meta property="og:image" content="url_to_image.png">
-  <meta property="og:url" content="https://www.techteamportfolio.com">
-  <link rel="stylesheet" href="styles.css">
+  <meta property="og:description" content="We build high-performance web and mobile applications: Web Development, Mobile App Development, Software Solutions.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="favicon.ico">
+  <meta property="og:url" content="https://your-company-website.com/">
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              500: '#2563eb', /* blue-600 */
+              600: '#1e40af', /* blue-800 */
+              700: '#1e3a8a'  /* blue-900 */
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Defer custom JavaScript -->
+  <script defer src="script.js"></script>
 </head>
-<body>
-  <header>
-    <h1>Welcome to Tech Team Portfolio</h1>
-    <nav>
-      <ul>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#contact">Contact</a></li>
+<body class="font-sans bg-gradient-to-br from-blue-50 to-white text-gray-900 scroll-smooth antialiased">
+
+  <!-- Header & Navigation -->
+  <header class="sticky top-0 z-20 bg-white/80 backdrop-blur shadow-sm">
+    <nav class="container mx-auto flex items-center justify-between py-4 px-4 md:px-0" aria-label="Main Navigation">
+      <div class="flex items-center gap-2">
+        <img src="favicon.ico" alt="Tech Team Logo" class="w-8 h-8 rounded" loading="lazy">
+        <span class="text-xl font-bold text-primary-600">Tech Team Portfolio</span>
+      </div>
+      <button id="nav-toggle" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation" class="block md:hidden text-primary-600 hover:text-primary-700 focus:outline-none" type="button">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+      <ul id="navbar-menu" class="fixed md:static top-16 inset-x-0 pb-6 md:pb-0 bg-white md:bg-transparent flex flex-col md:flex-row gap-4 md:gap-8 items-center md:items-center shadow md:shadow-none border-b md:border-none md:w-auto w-full transition-all duration-200 -translate-y-full md:translate-y-0 invisible md:visible opacity-0 md:opacity-100 pointer-events-none md:pointer-events-auto"
+        aria-label="Primary">
+        <li><a href="#about" class="nav-link text-gray-700 hover:text-primary-600">About</a></li>
+        <li><a href="#services" class="nav-link text-gray-700 hover:text-primary-600">Services</a></li>
+        <li><a href="#stack" class="nav-link text-gray-700 hover:text-primary-600">Tech Stack</a></li>
+        <li><a href="#workflow" class="nav-link text-gray-700 hover:text-primary-600">Workflow</a></li>
+        <li><a href="#portfolio" class="nav-link text-gray-700 hover:text-primary-600">Portfolio</a></li>
+        <li><a href="#team" class="nav-link text-gray-700 hover:text-primary-600">Team</a></li>
+        <li><a href="#contact" class="nav-link text-gray-700 hover:text-primary-600">Contact</a></li>
       </ul>
     </nav>
   </header>
+
   <main>
-    <section id="services">
-      <h2>Our Services</h2>
-      <p>We offer a range of development services, including:</p>
-      <ul>
-        <li>Web Development</li>
-        <li>Mobile App Development</li>
-        <li>Custom Software Solutions</li>
-      </ul>
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-[70vh] flex flex-col justify-center items-center text-center px-4 py-24 fade-in" style="background:linear-gradient(135deg,#2563eb 0%, #1e40af 60%);">
+      <div class="bg-white/6 backdrop-blur-sm rounded-2xl p-8 max-w-4xl">
+        <h1 class="text-4xl md:text-6xl font-extrabold text-white drop-shadow mb-4">Tech Team Portfolio</h1>
+        <p class="text-lg md:text-2xl font-semibold text-white mb-4">Web Development, Mobile App Development, &amp; Software Solutions</p>
+        <p class="text-white opacity-90 max-w-2xl mx-auto mb-6">We are a passionate, agile software development team delivering high-performance web and mobile applications tailored for your business growth.</p>
+        <a href="#contact" class="inline-block px-8 py-3 bg-white text-primary-700 font-bold rounded-full shadow-lg hover:bg-primary-600 hover:text-white transition focus:ring-4 focus:ring-primary-300" aria-label="Contact Us">Contact Us</a>
+      </div>
+      <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white/40 to-transparent pointer-events-none"></div>
     </section>
-    <section id="about">
-      <h2>About Us</h2>
-      <p>We are a team of experienced developers and designers dedicated to delivering high-quality solutions.</p>
+
+    <!-- About Us -->
+    <section id="about" class="container mx-auto px-4 py-16 fade-in">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-primary-600 mb-3">About Us</h2>
+        <p class="mb-6 text-gray-700">We are a forward-thinking team crafting world-class web and mobile applications. Our focus: collaboration, clean code, agility, and scalable digital solutions.</p>
+      </div>
+      <div class="flex flex-col md:flex-row gap-8 justify-center">
+        <article class="flex-1 bg-white/80 rounded-xl p-6 shadow-md">
+          <h3 class="font-semibold mb-2 text-primary-700">Mission</h3>
+          <p class="text-gray-700">To empower brands with custom digital products that accelerate growth and inspire trust through innovation and quality.</p>
+        </article>
+        <article class="flex-1 bg-white/80 rounded-xl p-6 shadow-md">
+          <h3 class="font-semibold mb-2 text-primary-700">Vision</h3>
+          <p class="text-gray-700">To lead by delivering scalable, user-centric software solutions and setting new standards for technical excellence.</p>
+        </article>
+        <article class="flex-1 bg-white/80 rounded-xl p-6 shadow-md">
+          <h3 class="font-semibold mb-2 text-primary-700">Teamwork</h3>
+          <p class="text-gray-700">We use agile methodologies, emphasize collaboration, and write maintainable code so every project is robust and future-proof.</p>
+        </article>
+      </div>
     </section>
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <p>Get in touch with us for your project!</p>
+
+    <!-- Services -->
+    <section id="services" class="bg-white py-16 px-4 fade-in">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-primary-600 text-center mb-10">Our Services</h2>
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="bg-gradient-to-br from-blue-50 to-white rounded-xl shadow p-6 hover:shadow-lg transition">
+            <h3 class="font-bold text-primary-700 mb-2">Web Application Development</h3>
+            <p class="text-gray-700 text-sm">Build high-performance, responsive, SEO-optimized web apps with modern technologies, razor-fast loading, and future-ready design.</p>
+          </div>
+          <div class="bg-gradient-to-br from-blue-50 to-white rounded-xl shadow p-6 hover:shadow-lg transition">
+            <h3 class="font-bold text-primary-700 mb-2">Mobile App Development</h3>
+            <p class="text-gray-700 text-sm">Cross-platform mobile solutions using Flutter &amp; React Native, ensuring stellar UX and reliable performance.</p>
+          </div>
+          <div class="bg-gradient-to-br from-blue-50 to-white rounded-xl shadow p-6 hover:shadow-lg transition">
+            <h3 class="font-bold text-primary-700 mb-2">UI/UX Design</h3>
+            <p class="text-gray-700 text-sm">Intuitive, user-centric interfaces designed to engage users and boost conversion with clean aesthetics.</p>
+          </div>
+          <div class="bg-gradient-to-br from-blue-50 to-white rounded-xl shadow p-6 hover:shadow-lg transition">
+            <h3 class="font-bold text-primary-700 mb-2">API Development</h3>
+            <p class="text-gray-700 text-sm">Robust, scalable backend APIs tailored for rapid data delivery, security, and seamless integrations.</p>
+          </div>
+          <div class="bg-gradient-to-br from-blue-50 to-white rounded-xl shadow p-6 hover:shadow-lg transition">
+            <h3 class="font-bold text-primary-700 mb-2">Maintenance &amp; Support</h3>
+            <p class="text-gray-700 text-sm">Continuous improvements, monitoring, and support for optimal performance and peace of mind.</p>
+          </div>
+        </div>
+      </div>
     </section>
+
+    <!-- Technology Stack -->
+    <section id="stack" class="container mx-auto px-4 py-16 fade-in">
+      <h2 class="text-3xl font-bold text-primary-600 text-center mb-10">Technology Stack</h2>
+      <div class="grid gap-6 md:grid-cols-4 sm:grid-cols-2 max-w-4xl mx-auto">
+        <div class="bg-white rounded-xl shadow p-5 flex flex-col items-center">
+          <h3 class="font-semibold text-primary-700 mb-1">Frontend</h3>
+          <ul class="text-sm text-gray-700 space-y-1">
+            <li><span class="inline-block w-2 h-2 bg-primary-600 rounded-full mr-2"></span>React</li>
+            <li><span class="inline-block w-2 h-2 bg-primary-600 rounded-full mr-2"></span>HTML</li>
+            <li><span class="inline-block w-2 h-2 bg-primary-600 rounded-full mr-2"></span>CSS</li>
+            <li><span class="inline-block w-2 h-2 bg-primary-600 rounded-full mr-2"></span>JavaScript</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-xl shadow p-5 flex flex-col items-center">
+          <h3 class="font-semibold text-primary-700 mb-1">Backend</h3>
+          <ul class="text-sm text-gray-700 space-y-1">
+            <li><span class="inline-block w-2 h-2 bg-primary-600 rounded-full mr-2"></span>Node.js</li>
+            <li><span class="inline-block w-2 h-2 bg-primary-600 rounded-full mr-2"></span>Laravel</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-xl shadow p-5 flex flex-col items-center">
+          <h3 class="font-semibold text-primary-700 mb-1">Mobile</h3>
+          <ul class="text-sm text-gray-700 space-y-1">
+            <li><span class="inline-block w-2 h-2 bg-primary-600 rounded-full mr-2"></span>Flutter</li>
+            <li><span class="inline-block w-2 h-2 bg-primary-600 rounded-full mr-2"></span>React Native</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-xl shadow p-5 flex flex-col items-center">
+          <h3 class="font-semibold text-primary-700 mb-1">Database</h3>
+          <ul class="text-sm text-gray-700 space-y-1">
+            <li><span class="inline-block w-2 h-2 bg-primary-600 rounded-full mr-2"></span>MySQL</li>
+            <li><span class="inline-block w-2 h-2 bg-primary-600 rounded-full mr-2"></span>MongoDB</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Workflow / Process -->
+    <section id="workflow" class="bg-white py-16 px-4 fade-in">
+      <h2 class="text-3xl font-bold text-primary-600 text-center mb-10">Our Workflow</h2>
+      <div class="container mx-auto flex flex-wrap items-center justify-center gap-6">
+        <div class="max-w-xs bg-primary-500 text-white rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition">
+          <span class="text-2xl font-bold mb-2">1</span>
+          <h3 class="font-semibold mb-2">Requirements</h3>
+          <p class="text-sm text-center">Understanding your business goals and technical needs for tailored solutions.</p>
+        </div>
+        <div class="max-w-xs bg-primary-500 text-white rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition">
+          <span class="text-2xl font-bold mb-2">2</span>
+          <h3 class="font-semibold mb-2">Planning</h3>
+          <p class="text-sm text-center">Strategic project planning, timeline creation, and resource allocation.</p>
+        </div>
+        <div class="max-w-xs bg-primary-500 text-white rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition">
+          <span class="text-2xl font-bold mb-2">3</span>
+          <h3 class="font-semibold mb-2">Design</h3>
+          <p class="text-sm text-center">Crafting UI/UX to deliver intuitive, beautiful experiences.</p>
+        </div>
+        <div class="max-w-xs bg-primary-500 text-white rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition">
+          <span class="text-2xl font-bold mb-2">4</span>
+          <h3 class="font-semibold mb-2">Development</h3>
+          <p class="text-sm text-center">Agile coding by experts using best modern practices for quality and speed.</p>
+        </div>
+        <div class="max-w-xs bg-primary-500 text-white rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition">
+          <span class="text-2xl font-bold mb-2">5</span>
+          <h3 class="font-semibold mb-2">Testing</h3>
+          <p class="text-sm text-center">Robust QA and user acceptance to ensure reliability and top-notch quality.</p>
+        </div>
+        <div class="max-w-xs bg-primary-500 text-white rounded-xl shadow-lg p-6 flex flex-col items-center hover:scale-105 transition">
+          <span class="text-2xl font-bold mb-2">6</span>
+          <h3 class="font-semibold mb-2">Deployment</h3>
+          <p class="text-sm text-center">Smooth go-live and post-launch support for flawless user experience.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="container mx-auto px-4 py-16 fade-in">
+      <h2 class="text-3xl font-bold text-primary-600 text-center mb-10">Portfolio</h2>
+      <div class="grid gap-8 md:grid-cols-3 sm:grid-cols-2">
+        <article class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
+          <img src="https://via.placeholder.com/350x180?text=Project+1" alt="Project 1 screenshot" loading="lazy" class="mb-3 rounded-md w-full h-40 object-cover"/>
+          <h3 class="text-lg font-semibold text-primary-700 mb-1">Project One</h3>
+          <p class="text-gray-700 text-sm mb-3">A high-traffic e-commerce platform – built for speed, conversion, and seamless user experience on web &amp; mobile.</p>
+          <a href="#" class="text-sm px-4 py-2 rounded bg-primary-600 text-white hover:bg-primary-700 transition">View Details</a>
+        </article>
+        <article class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
+          <img src="https://via.placeholder.com/350x180?text=Project+2" alt="Project 2 screenshot" loading="lazy" class="mb-3 rounded-md w-full h-40 object-cover"/>
+          <h3 class="text-lg font-semibold text-primary-700 mb-1">Project Two</h3>
+          <p class="text-gray-700 text-sm mb-3">Mobile app for real-time collaboration—cross-platform, scalable, and intuitive from day one.</p>
+          <a href="#" class="text-sm px-4 py-2 rounded bg-primary-600 text-white hover:bg-primary-700 transition">View Details</a>
+        </article>
+        <article class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
+          <img src="https://via.placeholder.com/350x180?text=Project+3" alt="Project 3 screenshot" loading="lazy" class="mb-3 rounded-md w-full h-40 object-cover"/>
+          <h3 class="text-lg font-semibold text-primary-700 mb-1">Project Three</h3>
+          <p class="text-gray-700 text-sm mb-3">SaaS analytics dashboard with robust API integration and modern design for business intelligence.</p>
+          <a href="#" class="text-sm px-4 py-2 rounded bg-primary-600 text-white hover:bg-primary-700 transition">View Details</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="bg-white py-16 px-4 fade-in">
+      <h2 class="text-3xl font-bold text-primary-600 text-center mb-10">Meet the Team</h2>
+      <div class="container mx-auto flex flex-wrap gap-6 justify-center">
+        <article class="bg-gradient-to-tr from-blue-100 to-white rounded-xl shadow p-6 flex flex-col items-center w-72">
+          <img src="https://via.placeholder.com/96x96?text=JD" alt="John Doe" loading="lazy" class="rounded-full w-24 h-24 mb-4"/>
+          <h3 class="font-bold text-primary-700 text-lg">John Doe</h3>
+          <div class="text-gray-700 text-sm mb-2">Lead Full-Stack Developer</div>
+          <p class="text-gray-600 text-center text-sm">Expert in scalable backend and rich frontend experiences using Node.js and React.</p>
+        </article>
+        <article class="bg-gradient-to-tr from-blue-100 to-white rounded-xl shadow p-6 flex flex-col items-center w-72">
+          <img src="https://via.placeholder.com/96x96?text=JS" alt="Jane Smith" loading="lazy" class="rounded-full w-24 h-24 mb-4"/>
+          <h3 class="font-bold text-primary-700 text-lg">Jane Smith</h3>
+          <div class="text-gray-700 text-sm mb-2">Mobile Engineer</div>
+          <p class="text-gray-600 text-center text-sm">Specializes in cross-platform mobile apps and modern UI/UX with Flutter &amp; React Native.</p>
+        </article>
+        <article class="bg-gradient-to-tr from-blue-100 to-white rounded-xl shadow p-6 flex flex-col items-center w-72">
+          <img src="https://via.placeholder.com/96x96?text=AA" alt="Alex Anderson" loading="lazy" class="rounded-full w-24 h-24 mb-4"/>
+          <h3 class="font-bold text-primary-700 text-lg">Alex Anderson</h3>
+          <div class="text-gray-700 text-sm mb-2">UI/UX Designer</div>
+          <p class="text-gray-600 text-center text-sm">Delivers clean, accessible, and conversion-focused interfaces for web and mobile.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container mx-auto px-4 py-16 fade-in">
+      <h2 class="text-3xl font-bold text-primary-600 text-center mb-10">Contact Us</h2>
+      <form id="contact-form" class="max-w-xl mx-auto bg-white rounded-xl shadow-md p-8 space-y-6" aria-label="Contact Form" novalidate>
+        <div>
+          <label for="name" class="block mb-1 font-semibold text-gray-700">Name</label>
+          <input type="text" id="name" name="name" aria-required="true" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-300 transition"/>
+          <span class="text-red-500 text-sm hidden" id="error-name"></span>
+        </div>
+        <div>
+          <label for="email" class="block mb-1 font-semibold text-gray-700">Email</label>
+          <input type="email" id="email" name="email" aria-required="true" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-300 transition"/>
+          <span class="text-red-500 text-sm hidden" id="error-email"></span>
+        </div>
+        <div>
+          <label for="message" class="block mb-1 font-semibold text-gray-700">Message</label>
+          <textarea id="message" name="message" rows="4" aria-required="true" required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-300 transition"></textarea>
+          <span class="text-red-500 text-sm hidden" id="error-message"></span>
+        </div>
+        <button type="submit" class="w-full px-5 py-3 bg-primary-600 text-white font-bold rounded-lg hover:bg-primary-700 focus:ring-4 focus:ring-primary-300 transition">Send Message</button>
+        <div class="text-green-600 text-center text-sm hidden" id="success-message">Your message was sent successfully!</div>
+      </form>
+    </section>
+
   </main>
-  <footer>
-    <p>&copy; 2026 Tech Team Portfolio. All rights reserved.</p>
+
+  <!-- Footer -->
+  <footer class="bg-primary-700 text-white text-center py-5 text-sm">
+    <div class="flex items-center justify-center gap-4 mb-2">
+      <a href="#" aria-label="LinkedIn" class="hover:text-primary-300 transition">LinkedIn</a>
+      <a href="#" aria-label="Twitter" class="hover:text-primary-300 transition">Twitter</a>
+      <a href="#" aria-label="GitHub" class="hover:text-primary-300 transition">GitHub</a>
+    </div>
+    <div>&copy; 2026 Tech Team Portfolio. All rights reserved.</div>
   </footer>
+
 </body>
 </html>
