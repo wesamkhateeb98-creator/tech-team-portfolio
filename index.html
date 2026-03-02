@@ -11,10 +11,10 @@
   <meta property="og:title" content="Tech Team Portfolio | Web & Mobile App Development Experts">
   <meta property="og:description" content="We build high-performance web and mobile applications: Web Development, Mobile App Development, Software Solutions.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="favicon.ico">
+  <meta property="og:image" content="/favicon.svg">
   <meta property="og:url" content="https://your-company-website.com/">
   <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -35,6 +35,47 @@
       }
     }
   </script>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://your-company-website.com/#organization",
+        "name": "Tech Team Portfolio",
+        "url": "https://your-company-website.com/",
+        "logo": "https://your-company-website.com/favicon.svg",
+        "sameAs": [
+          "https://www.linkedin.com/company/your-company",
+          "https://twitter.com/your-company",
+          "https://github.com/your-company"
+        ],
+        "contactPoint": [{
+          "@type": "ContactPoint",
+          "email": "info@your-company-website.com",
+          "contactType": "customer support",
+          "areaServed": "Worldwide",
+          "availableLanguage": ["English"]
+        }]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://your-company-website.com/#website",
+        "url": "https://your-company-website.com/",
+        "name": "Tech Team Portfolio",
+        "inLanguage": "en-US",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://your-company-website.com/?s={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
+  }
+  </script>
+
   <!-- Defer custom JavaScript -->
   <script defer src="script.js"></script>
 </head>
@@ -44,7 +85,7 @@
   <header class="sticky top-0 z-20 bg-white/80 backdrop-blur shadow-sm">
     <nav class="container mx-auto flex items-center justify-between py-4 px-4 md:px-0" aria-label="Main Navigation">
       <div class="flex items-center gap-2">
-        <img src="favicon.ico" alt="Tech Team Logo" class="w-8 h-8 rounded" loading="lazy">
+        <img src="/favicon.svg" alt="Tech Team Logo" class="w-8 h-8 rounded" loading="lazy">
         <span class="text-xl font-bold text-primary-600">Tech Team Portfolio</span>
       </div>
       <button id="nav-toggle" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation" class="block md:hidden text-primary-600 hover:text-primary-700 focus:outline-none" type="button">
@@ -207,13 +248,13 @@
         <article class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
           <img src="https://via.placeholder.com/350x180?text=Project+1" alt="Project 1 screenshot" loading="lazy" class="mb-3 rounded-md w-full h-40 object-cover"/>
           <h3 class="text-lg font-semibold text-primary-700 mb-1">Project One</h3>
-          <p class="text-gray-700 text-sm mb-3">A high-traffic e-commerce platform – built for speed, conversion, and seamless user experience on web &amp; mobile.</p>
+          <p class="text-gray-700 text-sm mb-3">A high-traffic e-commerce platform ���2built for speed, conversion, and seamless user experience on web &amp; mobile.</p>
           <a href="#" class="text-sm px-4 py-2 rounded bg-primary-600 text-white hover:bg-primary-700 transition">View Details</a>
         </article>
         <article class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
           <img src="https://via.placeholder.com/350x180?text=Project+2" alt="Project 2 screenshot" loading="lazy" class="mb-3 rounded-md w-full h-40 object-cover"/>
           <h3 class="text-lg font-semibold text-primary-700 mb-1">Project Two</h3>
-          <p class="text-gray-700 text-sm mb-3">Mobile app for real-time collaboration—cross-platform, scalable, and intuitive from day one.</p>
+          <p class="text-gray-700 text-sm mb-3">Mobile app for real-time collaboration cross-platform, scalable, and intuitive from day one.</p>
           <a href="#" class="text-sm px-4 py-2 rounded bg-primary-600 text-white hover:bg-primary-700 transition">View Details</a>
         </article>
         <article class="bg-white rounded-xl shadow-md p-4 flex flex-col items-center">
